@@ -1,0 +1,135 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  .hero__subtitle {
+    font-family: "Inter", "Inter Placeholder", sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: #0e0e0e;
+  }
+  .hero__description {
+    font-family: "Inter", "Inter Placeholder", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #6e6e6e;
+  }
+  .hero__contents {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 15px;
+    .hero__phone-block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: white;
+      border-radius: 15px;
+      padding: 30px;
+      .hero__phone-block__message {
+        font-family: "Inter", "Inter Placeholder", sans-serif;
+        font-size: 18px;
+        font-weight: 500;
+        padding: 10px 25px;
+        border-radius: 20px;
+        background-color: #0e0e0e;
+        max-width: 220px;
+      }
+      .hero__phone-block__message__black {
+        background-color: #0e0e0e;
+        color: white;
+      }
+      .hero__phone-block__message__white {
+        background-color: #f4f4f4;
+        color: #0e0e0e;
+      }
+    }
+    .hero__time-block {
+      background-color: #0e0e0e;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-radius: 15px;
+      padding: 40px;
+      .hero__time-block__text {
+        text-align: center;
+        border-radius: 15px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 4px; /* reduce space between stacked text */
+        > * {
+          margin: 0; /* remove default margins from headings/paragraphs */
+        }
+        .hero__time-block__title-big {
+          font-family: "Inter", "Inter Placeholder", sans-serif;
+          font-size: 70px;
+          font-weight: 600;
+          color: white;
+        }
+      }
+    }
+    .hero__sales-block {
+      background-color: white;
+      border-radius: 15px;
+      .hero__sales-block__text {
+        padding: 30px;
+        text-align: left;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+    .hero__rate-block {
+      background-color: white;
+      border-radius: 15px;
+      background-image: url("../img/hero/clouds.png");
+      background-position: bottom;
+      background-size: cover;
+      .hero__rate-block__text {
+        padding: 30px;
+        text-align: left;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        .hero__rate-block__percentage {
+          font-family: "Inter", "Inter Placeholder", sans-serif;
+          font-size: 80px;
+          font-weight: 600;
+          text-align: center;
+          color: white;
+          margin: auto;
+        }
+        h2 {
+          color: white;
+        }
+      }
+    }
+    .hero__gif-block {
+      background-color: white;
+      border-radius: 15px;
+      padding: 30px;
+      .hero__gif-block__text {
+        text-align: left;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+      }
+      .hero__gif-block__gif {
+        .hero__gif-block__message {
+          font-family: "Inter", "Inter Placeholder", sans-serif;
+          font-size: 22px;
+          font-weight: 600;
+          background-color: #f4f4f4;
+          color: #0e0e0e;
+          padding: 10px;
+          border-radius: 20px;
+          text-align: center;
+          max-width: 200px;
+        }
+      }
+    }
+  }
+}
