@@ -2,25 +2,29 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 5px;
+
   .hero__subtitle {
     font-family: "Inter", "Inter Placeholder", sans-serif;
     font-size: 22px;
     font-weight: 600;
     color: #0e0e0e;
+    gap: 90px;
   }
   .hero__description {
     font-family: "Inter", "Inter Placeholder", sans-serif;
     font-size: 16px;
     font-weight: 400;
     color: #6e6e6e;
+    gap: 90px;
   }
   .hero__contents {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 10px;
+    gap: clamp(12px, 4vw, 20px);
+    padding: clamp(4px, 4vw, 16px);
     border-radius: 15px;
+
     .hero__phone-block {
       display: flex;
       flex-direction: column;
@@ -28,23 +32,79 @@
       background-color: white;
       border-radius: 15px;
       padding: 30px;
+      position: relative;
+      overflow: hidden;
+
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+      }
+      .hero__phone-block__image-container {
+        position: relative;
+        width: fit-content;
+        margin-bottom: -50%;
+      }
+
       .hero__phone-block__message {
-        font-family: "Inter", "Inter Placeholder", sans-serif;
-        font-size: 18px;
+        font-family: "Inter", sans-serif;
+        font-size: clamp(14px, 3vw, 18px);
         font-weight: 500;
         padding: 10px 25px;
         border-radius: 20px;
-        background-color: #0e0e0e;
         max-width: 220px;
+        z-index: 100;
+        position: absolute;
       }
+
       .hero__phone-block__message__black {
         background-color: #0e0e0e;
         color: white;
       }
+
       .hero__phone-block__message__white {
         background-color: #f4f4f4;
         color: #0e0e0e;
       }
+
+      #message1 {
+        top: 10%;
+        left: -15%;
+        transform: rotate(3deg);
+      }
+
+      #message2 {
+        top: 22%;
+        right: -20%;
+        transform: rotate(3deg);
+      }
+
+      #message3 {
+        top: 34%;
+        left: -12%;
+        transform: rotate(3deg);
+      }
+
+      #message4 {
+        top: 46%;
+        right: -8%;
+        transform: rotate(-3deg);
+      }
+    }
+    .hero__phone-block::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 40%;
+      background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 1) 100%
+      );
+      pointer-events: none;
+      z-index: 5;
     }
     .hero__time-block {
       background-color: #0e0e0e;
@@ -65,7 +125,7 @@
         }
         .hero__time-block__title-big {
           font-family: "Inter", "Inter Placeholder", sans-serif;
-          font-size: 70px;
+          font-size: clamp(40px, 8vw, 70px);
           font-weight: 600;
           color: white;
         }
@@ -96,7 +156,7 @@
         flex-direction: column;
         .hero__rate-block__percentage {
           font-family: "Inter", "Inter Placeholder", sans-serif;
-          font-size: 80px;
+          font-size: clamp(40px, 8vw, 80px);
           font-weight: 600;
           text-align: center;
           color: white;
