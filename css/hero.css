@@ -36,22 +36,22 @@
       overflow: hidden;
       width: fit-content;
 
-      img {
-        max-width: 100%;
-        height: auto;
-        display: block;
-        margin-top: 0.5vw;
-      }
       .hero__phone-block__image-container {
         position: relative;
-        width: fit-content;
         height: 600px;
+        img {
+          min-width: 250px;
+          max-width: 100%;
+          height: auto;
+          display: block;
+          margin-top: 0.5vw;
+        }
       }
 
       .hero__phone-block__message {
         margin-top: 0.5vw;
         font-family: "Inter", sans-serif;
-        font-size: clamp(14px, 3vw, 18px);
+        font-size: clamp(10px, 3vw, 18px);
         font-weight: 500;
         padding: 10px 25px;
         border-radius: 20px;
@@ -72,25 +72,25 @@
 
       #message1 {
         top: 10%;
-        left: -20%;
+        left: -10%;
         transform: rotate(3deg);
       }
 
       #message2 {
         top: 22%;
-        right: -20%;
+        right: -10%;
         transform: rotate(3deg);
       }
 
       #message3 {
         top: 34%;
-        left: -20%;
+        left: -10%;
         transform: rotate(3deg);
       }
 
       #message4 {
         top: 46%;
-        right: -20%;
+        right: -10%;
         transform: rotate(-3deg);
       }
     }
@@ -209,6 +209,29 @@
           max-width: 40%;
           z-index: 100;
         }
+        #message1 {
+          top: 10%;
+          left: -20%;
+          transform: rotate(3deg);
+        }
+
+        #message2 {
+          top: 22%;
+          right: -20%;
+          transform: rotate(3deg);
+        }
+
+        #message3 {
+          top: 34%;
+          left: -20%;
+          transform: rotate(3deg);
+        }
+
+        #message4 {
+          top: 46%;
+          right: -20%;
+          transform: rotate(-3deg);
+        }
       }
       .hero__rate-block {
         grid-column: span 2;
@@ -221,7 +244,7 @@
       .hero__phone-block {
         grid-area: 1/1/3/3;
       }
-      .hero__rate-block{
+      .hero__rate-block {
         grid-area: 1/3/2/4;
       }
       .hero__time-block {
