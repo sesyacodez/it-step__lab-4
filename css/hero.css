@@ -204,7 +204,7 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        .hero__phone-block__titles{
+        .hero__phone-block__titles {
           margin-top: auto;
           max-width: 40%;
           z-index: 100;
@@ -212,6 +212,26 @@
       }
       .hero__rate-block {
         grid-column: span 2;
+      }
+    }
+    @media (min-width: 1200px) {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(1fr, 70px, 1fr);
+
+      .hero__phone-block {
+        grid-area: 1/1/3/3;
+      }
+      .hero__rate-block{
+        grid-area: 1/3/2/4;
+      }
+      .hero__time-block {
+        grid-area: 3/1/4/2;
+      }
+      .hero__sales-block {
+        grid-area: 3/2/4/3;
+      }
+      .hero__gif-block {
+        grid-area: 2/3/4/4;
       }
     }
   }
