@@ -34,19 +34,22 @@
       padding: 30px;
       position: relative;
       overflow: hidden;
+      width: fit-content;
 
       img {
         max-width: 100%;
         height: auto;
         display: block;
+        margin-top: 0.5vw;
       }
       .hero__phone-block__image-container {
         position: relative;
         width: fit-content;
-        margin-bottom: -50%;
+        height: 600px;
       }
 
       .hero__phone-block__message {
+        margin-top: 0.5vw;
         font-family: "Inter", sans-serif;
         font-size: clamp(14px, 3vw, 18px);
         font-weight: 500;
@@ -69,7 +72,7 @@
 
       #message1 {
         top: 10%;
-        left: -15%;
+        left: -20%;
         transform: rotate(3deg);
       }
 
@@ -81,13 +84,13 @@
 
       #message3 {
         top: 34%;
-        left: -12%;
+        left: -20%;
         transform: rotate(3deg);
       }
 
       #message4 {
         top: 46%;
-        right: -8%;
+        right: -20%;
         transform: rotate(-3deg);
       }
     }
@@ -119,9 +122,9 @@
         display: flex;
         align-items: center;
         flex-direction: column;
-        gap: 4px; /* reduce space between stacked text */
+        gap: 4px;
         > * {
-          margin: 0; /* remove default margins from headings/paragraphs */
+          margin: 0;
         }
         .hero__time-block__title-big {
           font-family: "Inter", "Inter Placeholder", sans-serif;
@@ -148,6 +151,7 @@
       background-image: url("../img/hero/clouds.png");
       background-position: bottom;
       background-size: cover;
+      background-position-y: 20%;
       .hero__rate-block__text {
         padding: 30px;
         text-align: left;
@@ -180,7 +184,7 @@
       .hero__gif-block__gif {
         .hero__gif-block__message {
           font-family: "Inter", "Inter Placeholder", sans-serif;
-          font-size: 22px;
+          font-size: clamp(14px, 3vw, 22px);
           font-weight: 600;
           background-color: #f4f4f4;
           color: #0e0e0e;
@@ -189,6 +193,25 @@
           text-align: center;
           max-width: 200px;
         }
+      }
+    }
+    @media (min-width: 810px) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+
+      .hero__phone-block {
+        grid-column: span 2;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .hero__phone-block__titles{
+          margin-top: auto;
+          max-width: 40%;
+          z-index: 100;
+        }
+      }
+      .hero__rate-block {
+        grid-column: span 2;
       }
     }
   }

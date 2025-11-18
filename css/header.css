@@ -35,7 +35,7 @@
       display: none;
       flex-direction: row;
       gap: 20px;
-      @media (min-width: 768px) {
+      @media (min-width: 810px) {
         display: flex;
       }
       .header__menu-list {
